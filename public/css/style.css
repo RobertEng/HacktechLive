@@ -1,0 +1,71 @@
+html {
+	min-height: 100%;
+}
+
+body {
+	/*margin: 0;*/
+	/*font-family: "Lato", sans-serif;*/
+	font-family: 'Exo 2', sans-serif;
+	font-size: 40px;
+	color: white;
+
+	height: 100%;
+
+}
+
+a {
+	color: #00B7FF;
+}
+
+h3 {
+	margin-top: 10px;
+}
+
+.slide {
+	width: 100%;
+}
+
+#homeSlide {
+	background-image: url('/img/Beckman_auditorium,_Caltech.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center bottom;
+	
+	height: 100%;
+	padding-top: 100px;
+	/*padding-bottom: 100px;*/ /*For big website */
+	padding-bottom: 50px; /* temp padding */
+
+}
+
+#homeContent {
+	text-align: center;
+	display: block;
+	/*margin: auto;*/
+}
+
+
+#registerButton {
+	padding: 0px 24px 5px 24px; /* Exo 2 font has floaty space above it. This fixes it. */
+  	font-size: 36px;
+}
+
+.btn-tech {
+	background-color: #ff9422;
+	color: white;
+	-webkit-transition: color 0.2s;
+  	transition: color 0.2s;
+}
+
+.btn-tech:hover {
+	color: #d35400; /* Pumpkin! */
+}
+
+.btn-tech:focus {
+	color: #d35400; /* Pumpkin! */
+	
+}
+
+#homeBanner {
+	width: 100%;
+}

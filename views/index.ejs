@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hacktech</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Hacktech 2015 Jan. 29 - Jan. 31">
+    <meta name="keywords" content="hacktech, caltech, hackathon">
+
+    <%- include partials/headerFiles.ejs %>
+
+
+  </head>
+  <body>
+  	<div id="homeSlide" class="slide">
+	  	<div class="container">
+        
+        <div id="homeContent">
+          <img id="homeLogo" src="img/hacktechlogo.png" height="300px">
+          
+          <div id="homeWords">
+            <h1>WHERE DREAMS COME TRUE</h1>
+            <h3>Anaheim Convention Center</h3>
+            <h3>January 29 - January 31</h3>
+            <!-- <button id="registerButton" class="btn btn-tech" data-toggle="modal" data-target="registerModal">GET UPDATES</button> -->
+
+
+            <%- include partials/modal.ejs %>
+
+            <!-- <button id="registerButton" class="typeform-share btn btn-tech" onclick="https://reng.typeform.com/to/j28tMf" data-mode="1" target="_blank">Updates</button> -->
+            <a class="typeform-share btn btn-tech" id="registerButton" href="https://reng.typeform.com/to/j28tMf" data-mode="1" target="_blank">GET UPDATES</a>
+            <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}id=id+'_';if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}})()</script>
+
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    
+
+
+
+
+    <div class="slide">
+    </div>
+    <div class="slide">
+    </div>
+    <div class="slide">
+    </div>
+  
+    <%- include partials/footerFiles.ejs %>    
+  </body>
+</html>

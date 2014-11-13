@@ -1,0 +1,35 @@
+.modal {
+	color: black;
+	font-size: 2px;
+}
+
+.modal-content {
+	background-color: rgba(255, 255, 255, 0.85);
+
+}
+
+.control-label {
+	font-size: 18px;
+	font-weight: normal;
+}
+
+.modal-header {
+	text-align: center;
+}
+
+.modal-body {
+	text-align: left;
+
+}
+
+.modal-footer {
+	text-align: center;
+}
+
+.form-group {
+	margin: 0px;
+}
+
+#registerNameFormGroup {
+	padding-bottom: 15px;
+}
