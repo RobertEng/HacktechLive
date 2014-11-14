@@ -1,5 +1,6 @@
 html {
 	min-height: 100%;
+	height: 100%;
 }
 
 body {
@@ -9,6 +10,7 @@ body {
 	font-size: 40px;
 	color: white;
 
+	min-height: 100%;
 	height: 100%;
 
 }
@@ -26,13 +28,13 @@ h3 {
 }
 
 #homeSlide {
-	background-image: url('/img/Beckman_auditorium,_Caltech.jpg');
+	background-image: url('/img/mainstreet_blur.jpg');
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center bottom;
 	
 	height: 100%;
-	padding-top: 100px;
+	padding-top: 50px;
 	/*padding-bottom: 100px;*/ /*For big website */
 	padding-bottom: 50px; /* temp padding */
 
@@ -62,8 +64,45 @@ h3 {
 }
 
 .btn-tech:focus {
-	color: #d35400; /* Pumpkin! */
+	color: #d35400; /* Pumpkin! */	
+}
+
+#updateButton {
+	font-size: 20px;
+	width: 400px;
+	-webkit-transition: border-color 0.2s;
+  	transition: border-color 0.2s;
+	-webkit-transition: color 0.2s;
+  	transition: color 0.2s;
+
+}
+
+#updateButton:hover {
+	border-color: #d35400; /* Pumpkin! */
+}
+
+#registerText {
+	width: 400px;
+	height: auto;
+	margin: auto;
+
+	font-size: 20px;
 	
+	border-color: #ff9422;
+	border-width: 2px;
+	background-color: rgba(255, 255, 255, 0.85);
+	-webkit-transition: background-color 0.2s;
+  	transition: background-color 0.2s;
+}
+
+#registerText:hover {
+	background-color: white;
+	border-color: #FFA647;
+}
+
+#registerText:focus {
+	background-color: white;
+	border-color: #FFA647;
 }
 
 #homeBanner {
