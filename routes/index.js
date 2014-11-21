@@ -70,7 +70,14 @@ router.post('/update', function(req, res) {
 	queryString += "'" + email + "', ";
 	queryString += "'" + (new Date()).toUTCString() + "');";
 	
-	// connection.query(queryString);
+	connection.query(queryString, function(err, result) {
+		if(err) {
+			console.log("Query did not work");
+			console.log(err);
+			res.end("You broke it in query");
+			success = false;
+		}
+	});
 
 	console.log("flag 3");
 
