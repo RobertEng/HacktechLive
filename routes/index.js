@@ -47,7 +47,7 @@ router.post('/update', function(req, res) {
 			res.end("You broke it in connect");
 			success = false;
 		} else {
-			res.end("success");
+
 		}
 	});
 
