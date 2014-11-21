@@ -54,20 +54,23 @@ router.post('/update', function(req, res) {
 
 	connection.connect(function(err) {
 		if(err) {
-			console.log("start connection");
 			console.log(err);
 			res.end("You broke it in connect");
 			success = false;
 		}
+		console.log('connected as id ' + connection.threadId);
+
 	});
 
 	console.log("flag 2");
+
+	// escape sql injection here later
 
 	var queryString = "INSERT INTO email_table (email_update, email_time) VALUES (";
 	queryString += "'" + email + "', ";
 	queryString += "'" + (new Date()).toUTCString() + "');";
 	
-	connection.query(queryString);
+	// connection.query(queryString);
 
 	console.log("flag 3");
 
