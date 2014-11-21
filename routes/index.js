@@ -16,7 +16,7 @@ router.post('/update', function(req, res) {
 	from the registerText input and validate then send to Google scripts to insert
 	into google spreadsheet */
 
-	console.log(req.data);
+	// console.log(req.body.registerText);
 	var email = req.body.registerText;
 	
 	// CHeck if email is undefined

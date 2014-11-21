@@ -12,7 +12,7 @@ $(document).ready(function(){
 		$.ajax({
 			type: "POST",
 			url: "/update",
-			data: $("#registerText").val(),
+			data: {registerText: $("#registerText").val()},
 			success: function(data) {
 				alert(data);
 			}
