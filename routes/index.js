@@ -16,8 +16,11 @@ router.post('/update', function(req, res) {
 	from the registerText input and validate then send to Google scripts to insert
 	into google spreadsheet */
 
+	console.log(req.data);
 	var email = req.body.registerText;
-		
+	
+	// CHeck if email is undefined
+
 	console.log("YOU ENTERED THIS WEIRD EMAIL " + email);
 
 	// regex from http://stackoverflow.com/questions/46155/validate-email-address-in-javascript

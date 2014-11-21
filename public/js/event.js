@@ -7,12 +7,12 @@ $(document).ready(function(){
 	$("#updateForm").submit(function(e) {
 		e.preventDefault(); // Stop form submission and subsequent refresh
 
-		console.log("AJAX CALL ALMOST");
+		console.log($("#registerText").val());
 
 		$.ajax({
 			type: "POST",
 			url: "/update",
-			data: $("registerText").value,
+			data: $("#registerText").val(),
 			success: function(data) {
 				alert(data);
 			}
