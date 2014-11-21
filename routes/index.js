@@ -40,8 +40,10 @@ var connection = mysql.createConnection({
 
 
 	connection.connect(function(err) {
-		if(err)
+		if(err) {
 			console.log(err);
+			res.render('error', {error: err, message: "Something Broke"})
+		}
   		//connected! (unless `err` is set)
 	});
 
@@ -51,11 +53,12 @@ var connection = mysql.createConnection({
 
 
 	connection.end(function(err) {
-		
+
 	});
 
 	console.log("I could get here");
- 	res.redirect('/');
+  	// res.redirect('/');
+ 	
 });
 
 module.exports = router;
