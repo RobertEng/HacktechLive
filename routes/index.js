@@ -51,7 +51,7 @@ router.post('/update', function(req, res) {
 	});
 
 	var queryString = "INSERT INTO email_table (email_update, email_time) VALUES (";
-	queryString += "'" + email + "', ";
+	queryString += email + ", ";
 	queryString += "'" + (new Date()).toUTCString() + "');";
 	
 	connection.query(queryString);
