@@ -61,9 +61,11 @@ router.post('/update', function(req, res) {
 		// queryString += "'" + (new Date()).toUTCString() + "');";
 		
 		// This one protects against injections
+
 		var queryString = "INSERT INTO email_table (email_update, email_time) VALUES (?,?);";
 
-		connection.query(queryString, [email, (new Date()).toUTCString()] function(err, result) {
+
+		connection.query(queryString, [email, (new Date()).toUTCString()], function(err, result) {
 			if(err) {
 				console.log("Query did not work");
 				console.log(err);
