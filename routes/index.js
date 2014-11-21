@@ -46,14 +46,14 @@ router.post('/update', function(req, res) {
 			console.log(err);
 			res.end("You broke it in connect");
 			success = false;
-		} else {
-
 		}
 	});
 
-
-	// connection.query();
-
+	var queryString = "INSERT INTO email_table (email_update, email_time) VALUES (";
+	queryString += "'" + email + "', ";
+	queryString += "'" + (new Date()).toUTCString() + "');";
+	
+	connection.query(queryString);
 
 	connection.end(function(err) {
 		if(err) {
@@ -62,7 +62,10 @@ router.post('/update', function(req, res) {
 			res.end("You broke it");
 			success = false;
 		} else {
-			res.end("success");
+			if(success)
+				res.end("success");
+			else
+				res.end("success??");
 		}
 	});
 
