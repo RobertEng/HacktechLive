@@ -17,7 +17,9 @@ router.post('/update', function(req, res) {
 	into google spreadsheet */
 
 	var email = req.body.registerText;
-	
+		
+	console.log("YOU ENTERED THIS WEIRD EMAIL " + email);
+
 	// regex from http://stackoverflow.com/questions/46155/validate-email-address-in-javascript
 	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 	
@@ -31,6 +33,8 @@ router.post('/update', function(req, res) {
 	// }
 
 
+	console.log("connect me");
+
 	var connection = mysql.createConnection({
 	  host     : process.env.RDS_HOSTNAME,
 	  user     : process.env.RDS_USERNAME,
@@ -41,6 +45,10 @@ router.post('/update', function(req, res) {
 
 	var success = true; // flag for success. I'm sure theres a better way to do this.
 
+
+
+	console.log("flag 1");
+
 	connection.connect(function(err) {
 		if(err) {
 			console.log("start connection");
@@ -50,11 +58,15 @@ router.post('/update', function(req, res) {
 		}
 	});
 
+	console.log("flag 2");
+
 	var queryString = "INSERT INTO email_table (email_update, email_time) VALUES (";
 	queryString += email + ", ";
 	queryString += "'" + (new Date()).toUTCString() + "');";
 	
 	connection.query(queryString);
+
+	console.log("flag 3");
 
 	connection.end(function(err) {
 		if(err) {
@@ -70,12 +82,8 @@ router.post('/update', function(req, res) {
 		}
 	});
 
-	// if(success) {
-	//   	res.end("success");
+	console.log("flag 4");
 
-	// } else {
-	// 	res.end("It bork");
-	// }
  	
 });
 
