@@ -12,11 +12,7 @@ router.get('/', function(req, res) {
 
 router.post('/update', function(req, res) {
 	console.log("In update");
-	/* This route is for getting the email from the GET UPDATES form. Get the email
-	from the registerText input and validate then send to Google scripts to insert
-	into google spreadsheet */
 
-	// console.log(req.body.registerText);
 	var email = req.body.registerText;
 	
 	// CHeck if email is undefined
@@ -27,75 +23,85 @@ router.post('/update', function(req, res) {
 	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 	
 
-	// if(re.test(email)) {
-	// 	// res.redirect("https://script.google.com/macros/s/AKfycbwbcNO1oDKlNBeqovDL1UkDg3vC1zVSNQa4K5n3Jgrnwu92xYQ/exec?email="+email);
-	// 	res.redirect("https://script.google.com/macros/s/AKfycbyMIkUEmUFQvnrmLtl8GgiET9ETqjrfemVounxiv-U/dev?email="+email);
-	// 	console.log("Afterward");
-	// } else { // Email did not pass validation
+	if(email != undefined && re.test(email)) {
+		console.log("Afterward");
 
-	// }
+		// Do the magic
+		var connection = mysql.createConnection({
+		  host     : process.env.RDS_HOSTNAME,
+		  user     : process.env.RDS_USERNAME,
+		  password : process.env.RDS_PASSWORD,
+		  port 	   : process.env.RDS_PORT,
+		  database : "ebdb"
+		});
 
-
-	console.log("connect me");
-
-	var connection = mysql.createConnection({
-	  host     : process.env.RDS_HOSTNAME,
-	  user     : process.env.RDS_USERNAME,
-	  password : process.env.RDS_PASSWORD,
-	  port 	   : process.env.RDS_PORT,
-	  database : "ebdb"
-	});
-
-	var success = true; // flag for success. I'm sure theres a better way to do this.
+		var success = true; // flag for success. I'm sure theres a better way to do this.
 
 
 
-	console.log("flag 1");
+		console.log("flag 1");
 
-	connection.connect(function(err) {
-		if(err) {
-			console.log(err);
-			res.end("You broke it in connect");
-			success = false;
-		}
-		console.log('connected as id ' + connection.threadId);
+		connection.connect(function(err) {
+			if(err) {
+				console.log(err);
+				res.end("You broke it in connect");
+				success = false;
+			}
+			console.log('connected as id ' + connection.threadId);
 
-	});
+		});
 
-	console.log("flag 2");
+		console.log("flag 2");
 
-	// escape sql injection here later
+		// escape sql injection here later
 
-	var queryString = "INSERT INTO email_table (email_update, email_time) VALUES (";
-	queryString += "'" + email + "', ";
-	queryString += "'" + (new Date()).toUTCString() + "');";
-	
-	connection.query(queryString, function(err, result) {
-		if(err) {
-			console.log("Query did not work");
-			console.log(err);
-			res.end("You broke it in query");
-			success = false;
-		}
-	});
+		// Old one for posterity
+		// var queryString = "INSERT INTO email_table (email_update, email_time) VALUES (";
+		// queryString += "'" + email + "', ";
+		// queryString += "'" + (new Date()).toUTCString() + "');";
+		
+		// This one protects against injections
+		var queryString = "INSERT INTO email_table (email_update, email_time) VALUES (?,?);";
 
-	console.log("flag 3");
+		connection.query(queryString, [email, (new Date()).toUTCString()] function(err, result) {
+			if(err) {
+				console.log("Query did not work");
+				console.log(err);
+				res.end("You broke it in query");
+				success = false;
+			}
+		});
 
-	connection.end(function(err) {
-		if(err) {
-			console.log("start connection in end");
-			console.log(err);
-			res.end("You broke it");
-			success = false;
-		} else {
-			if(success)
-				res.end("success");
-			else
-				res.end("success??");
-		}
-	});
+		console.log("flag 3");
 
-	console.log("flag 4");
+		connection.end(function(err) {
+			if(err) {
+				console.log("start connection in end");
+				console.log(err);
+				res.end("You broke it");
+				success = false;
+			} else {
+				if(success)
+					res.end("success");
+				else
+					res.end("success??");
+			}
+		});
+
+		console.log("flag 4");
+
+
+	} else { // Email did not pass validation
+		
+
+		// return back popup YOU DUN MESSED UP
+
+
+	}
+
+
+
+
 
  	
 });
