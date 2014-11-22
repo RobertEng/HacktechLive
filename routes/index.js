@@ -24,8 +24,6 @@ router.post('/update', function(req, res) {
 	
 
 	if(email != undefined && re.test(email)) {
-		console.log("Afterward");
-
 		// Do the magic
 		var connection = mysql.createConnection({
 		  host     : process.env.RDS_HOSTNAME,
@@ -38,24 +36,15 @@ router.post('/update', function(req, res) {
 		var success = true; // flag for success. I'm sure theres a better way to do this.
 
 
-
-		console.log("flag 1");
-
 		connection.connect(function(err) {
 			if(err) {
 				console.log(err);
-				res.end("You broke it in connect");
 				success = false;
 			}
-			console.log('connected as id ' + connection.threadId);
-
+			// console.log('connected as id ' + connection.threadId);
 		});
 
-		console.log("flag 2");
-
-		// escape sql injection here later
-
-		// Old one for posterity
+		// Old one for posterity. No sql injection protection
 		// var queryString = "INSERT INTO email_table (email_update, email_time) VALUES (";
 		// queryString += "'" + email + "', ";
 		// queryString += "'" + (new Date()).toUTCString() + "');";
@@ -67,34 +56,29 @@ router.post('/update', function(req, res) {
 
 		connection.query(queryString, [email, (new Date()).toUTCString()], function(err, result) {
 			if(err) {
-				console.log("Query did not work");
 				console.log(err);
-				res.end("You broke it in query");
 				success = false;
 			}
 		});
-
-		console.log("flag 3");
 
 		connection.end(function(err) {
 			if(err) {
-				console.log("start connection in end");
 				console.log(err);
-				res.end("You broke it");
 				success = false;
+				res.end("borked1");
 			} else {
-				if(success)
+				if(success) {
+					// Successful junk
 					res.end("success");
-				else
-					res.end("success??");
+				} else {
+					// We dun messed up
+					res.end("borked2");
+				}
 			}
 		});
 
-		console.log("flag 4");
-
-
 	} else { // Email did not pass validation
-		
+		res.end("email");		
 
 		// return back popup YOU DUN MESSED UP
 

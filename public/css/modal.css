@@ -1,6 +1,6 @@
 .modal {
 	color: black;
-	font-size: 2px;
+	font-size: 14px;
 }
 
 .modal-content {
@@ -18,7 +18,7 @@
 }
 
 .modal-body {
-	text-align: left;
+	text-align: center;
 
 }
 
