@@ -10,11 +10,20 @@ body {
 	color: white;
 
 	height: 100%;
-
 }
 
 a {
-	color: #00B7FF;
+	/* Right now this junk is for Contact Us mail link */
+	color: white;
+	font-size: 20px;
+	-webkit-transition: color 0.2s;
+  	transition: color 0.2s;
+}
+
+a:hover, a:focus {
+	color: #d35400; /* Pumpkin! */
+  	text-decoration: none;
+
 }
 
 h3 {

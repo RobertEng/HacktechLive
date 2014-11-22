@@ -24,7 +24,7 @@ router.post('/update', function(req, res) {
 	
 
 	if(email != undefined && re.test(email)) {
-		// Do the magic
+
 		var connection = mysql.createConnection({
 		  host     : process.env.RDS_HOSTNAME,
 		  user     : process.env.RDS_USERNAME,
@@ -34,7 +34,6 @@ router.post('/update', function(req, res) {
 		});
 
 		var success = true; // flag for success. I'm sure theres a better way to do this.
-
 
 		connection.connect(function(err) {
 			if(err) {
@@ -76,7 +75,6 @@ router.post('/update', function(req, res) {
 				}
 			}
 		});
-
 	} else { // Email did not pass validation
 		res.end("email");		
 

@@ -1,13 +1,7 @@
 $(document).ready(function(){
-	// $("#registerButton").click(function() {
-	// 	$("#registerModal").modal("toggle");
-	// });
-
 
 	$("#updateForm").submit(function(e) {
 		e.preventDefault(); // Stop form submission and subsequent refresh
-
-		console.log($("#registerText").val());
 
 		$.ajax({
 			type: "POST",
@@ -28,7 +22,6 @@ $(document).ready(function(){
 					$(".modal-body").html("<p>Oh noes! Something went wrong!</p>");
 
 				}
-
 
 			}
 		});
