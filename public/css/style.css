@@ -60,7 +60,7 @@ h3 {
 }
 
 #homeWords {
-	padding-bottom: 10px; /* Janky fix for the fact that the Exo 2 font adds 5px of space above itself. */
+	padding-bottom: 15px; /* Janky fix for the fact that the Exo 2 font adds 5px of space above itself. */
 }
 
 #registerButton {
