@@ -12,6 +12,10 @@ body {
 	height: 100%;
 }
 
+p {
+	font-size: 20px;
+}
+
 a {
 	/* Right now this junk is for Contact Us mail link */
 	color: white;
@@ -23,7 +27,6 @@ a {
 a:hover, a:focus {
 	color: #d35400; /* Pumpkin! */
   	text-decoration: none;
-
 }
 
 h1 {
@@ -36,10 +39,30 @@ h3 {
 	font-size: 20px;
 }
 
+.btn-tech {
+	background-color: #ff9422;
+	color: white;
+	-webkit-transition: color 0.2s;
+  	transition: color 0.2s;
+}
+
+.btn-tech:hover, .btn-tech:focus {
+	color: #d35400; /* Pumpkin! */
+}
+
+.slide-title {
+	text-align: center;
+	font-size: 50px;
+	margin-bottom: 30px;
+	margin-top: 0px;
+}
+
 .slide {
 	width: 100%;
 }
 
+
+/***************** HOME SLIDE THINGS *******************/
 #homeSlide {
 	background-image: url('/img/mainstreet_blur_dark.jpg');
 	background-size: cover;
@@ -48,8 +71,13 @@ h3 {
 	
 	min-height: 100%;
 	padding-top: 50px;
+	
+	position: relative; 	/* For banner */
+	padding-bottom: 200px; 	/* For banner */
 	/*padding-bottom: 100px;*/ /*For big website */
-	padding-bottom: 50px; /* temp padding */
+	/*padding-bottom: 50px;*/ /* temp padding */
+
+
 
 }
 
@@ -59,6 +87,16 @@ h3 {
 	/*margin: auto;*/
 }
 
+#homeLogo {
+	/* For the old logo */
+	height: 300px;
+
+	/* Stuff for new logo */
+	/*height: 200px;
+	position: relative;
+	left: -50px;*/
+}
+
 #homeWords {
 	padding-bottom: 15px; /* Janky fix for the fact that the Exo 2 font adds 5px of space above itself. */
 }
@@ -66,21 +104,6 @@ h3 {
 #registerButton {
 	padding: 0px 24px 5px 24px; /* Exo 2 font has floaty space above it. This fixes it. */
   	font-size: 36px;
-}
-
-.btn-tech {
-	background-color: #ff9422;
-	color: white;
-	-webkit-transition: color 0.2s;
-  	transition: color 0.2s;
-}
-
-.btn-tech:hover {
-	color: #d35400; /* Pumpkin! */
-}
-
-.btn-tech:focus {
-	color: #d35400; /* Pumpkin! */	
 }
 
 #updateButton {
@@ -111,16 +134,195 @@ h3 {
   	transition: background-color 0.2s;
 }
 
-#registerText:hover {
-	background-color: white;
-	border-color: #FFA647;
-}
-
-#registerText:focus {
+#registerText:hover, #registerText:focus {
 	background-color: white;
 	border-color: #FFA647;
 }
 
 #homeBanner {
 	width: 100%;
+
+	position: absolute;
+	bottom: -2px;
+}
+
+
+
+/***************** WHAT SLIDE THINGS *******************/
+#whatSlide {
+	color: black;
+}
+
+#whatContent {
+	max-width: 700px;
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	
+}
+
+
+/***************** PLACE SLIDE THINGS *******************/
+#placeSlide {
+	/*background-image: url('/img/disneyland_castle_blur.jpg');*/
+	background-image: url('/img/anaheim_convention_center2_blur.jpg');
+
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center bottom;
+
+	min-height: 500px;
+}
+
+#placeContainer {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.place-stat {
+	width: 33.333%;
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+}
+
+
+/***************** FAQ SLIDE THINGS *******************/
+#faqSlide {
+	color: black;
+}
+
+#faqContainer {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.faqModule {
+	padding: 10px;
+
+	/*margin: 20px;*/
+}
+
+.faqQuest {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.faqAnswer {
+	font-size: 14px;
+}
+
+/***************** LOGISTIC SLIDE THINGS *******************/
+#logisticSlide {
+	color: white;
+	background-image: url('/img/atHacktech_dark_blur.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center bottom;
+
+	/*height: 400px;*/
+
+}
+
+#logisticContainer {
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	text-align: center;
+}
+
+.at-element {
+	display: inline-block;
+	padding: 10px;
+	margin: 3px;
+	width: 200px;
+	height: 220px;
+
+	border: 7px solid;
+	border-radius: 10px;
+
+	/*-webkit-filter: blur(3px);*/
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.at-icon {
+	display: block;
+	margin: auto;
+	height: 150px;
+	width: 150px;
+}
+
+.at-element-color, .at-element-color * {
+	fill: white;
+	color: white;
+	border-color: white;
+	/* Note to self: Not the best idea to manipulate border-color for elements
+	that don't have a border, but this works and I'm going for clarity 
+	not accuracy. */
+	-webkit-transition: fill 0.2s, color 0.2s, border-color 0.2s;
+  	transition: fill 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.at-element-color:hover, .at-element-color:hover * {
+	color: #F5841F; /* Pumpkin! */
+	border-color: #F5841F;
+	fill: #F5841F;
+}
+
+
+
+/***************** SPONSOR SLIDE THINGS *******************/
+#sponsorSlide {
+	color: black;
+}
+
+#sponsorContainer {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+#sponsorHeader {
+	font-size: 20px;
+	text-align: center;
+}	
+
+#sponsorMail {
+	color: black;
+	-webkit-transition: color 0.2s;
+  	transition: color 0.2s;
+}
+
+#sponsorMail:hover, #sponsorMail:focus {
+	color: #d35400; /* Pumpkin! */
+  	text-decoration: none;
+}
+
+.sponsor-row {
+	width: 100%;
+	text-align: center;
+}
+
+.sponsor-1 {
+	height: 125px;
+	/*display: inline-block;*/
+}
+
+.sponsor-2 {
+	height: 100px;
+	/*display: inline-block;*/
+
+}
+
+.sponsor-3 {
+	height: 75px;
+	/*display: inline-block;*/
+
+}
+
+.sponsor-4 {
+	height: 50px;
+	/*display: inline-block;*/
+
 }
