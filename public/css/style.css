@@ -14,6 +14,7 @@ body {
 
 p {
 	font-size: 20px;
+	margin: 0px;
 }
 
 a {
@@ -31,12 +32,16 @@ a:hover, a:focus {
 
 h1 {
 	margin-bottom: 5px;
+	/*text-shadow: 2px 2px black;*/ /* Kinda cool. Maybe not the design I'm going for tho */
+
 }
 
 h3 {
 	margin-top: 5px;
 	margin-bottom: 5px;
 	font-size: 20px;
+
+	/*text-shadow: 2px 2px black;*/
 }
 
 .btn-tech {
@@ -179,6 +184,9 @@ h3 {
 	padding-bottom: 60px;
 	padding-left: 0px;
 	padding-right: 0px;
+
+	text-shadow: 2px 2px black;
+
 }
 
 .place-stat {
@@ -186,6 +194,7 @@ h3 {
 	display: inline-block;
 	text-align: center;
 	vertical-align: top;
+
 }
 
 
@@ -244,7 +253,9 @@ h3 {
 	border-radius: 10px;
 
 	/*-webkit-filter: blur(3px);*/
-	background-color: rgba(255, 255, 255, 0.4);
+	/*background-color: rgba(255, 255, 255, 0.4);*/
+	background-color: rgba(0, 0, 0, 0.2);
+
 }
 
 .at-icon {
@@ -266,10 +277,92 @@ h3 {
 }
 
 .at-element-color:hover, .at-element-color:hover * {
-	color: #F5841F; /* Pumpkin! */
+	color: #F5841F;
 	border-color: #F5841F;
 	fill: #F5841F;
 }
+
+
+/***************** FAMOUS SLIDE THINGS *******************/
+#famousSlide {
+	color: white;
+	background-color: #F5841F;
+
+}
+
+#famousContainer {
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	text-align: center;
+
+}
+
+.famous-element {
+	display: inline-block;
+	vertical-align: top;
+
+	margin: 20px 0px;
+
+	min-width: 250px;
+
+}
+
+.famous-portrait {
+	margin: auto;
+
+	width: 150px;
+	height: 150px;
+
+	border-radius: 50%;
+	background-size: cover;
+}
+
+.famous-words {
+	margin: 10px 0px;
+}
+
+h4 { /* For names */
+	font-size: 28px;
+	font-weight: bold;
+
+	margin: 0px;
+}
+
+h5 { /* For descriptions */
+	font-size: 18px;
+}
+
+#famousSpiegel {
+	background-image: url(/img/famous_spiegel.jpg);
+	background-position: 50%;
+
+}
+
+#famousGlover {
+	background-image: url(/img/famous_glover.jpg);	
+}
+
+#famousOhanian {
+	background-image: url(/img/famous_ohanian.jpg);
+
+}
+
+#famousRad {
+	background-image: url(/img/famous_rad.jpg);
+	background-position: 70%;	
+}
+
+#famousDupri {
+	background-image: url(/img/famous_dupri.jpg);
+	background-position: right;
+}
+
+#famousHeyward {
+	background-image: url(/img/famous_heyward.jpg);
+	background-position: right;
+}
+
 
 
 
@@ -306,23 +399,39 @@ h3 {
 
 .sponsor-1 {
 	height: 125px;
+
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+
 	/*display: inline-block;*/
 }
 
 .sponsor-2 {
 	height: 100px;
+
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+
 	/*display: inline-block;*/
 
 }
 
 .sponsor-3 {
 	height: 75px;
+
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+
 	/*display: inline-block;*/
 
 }
 
 .sponsor-4 {
 	height: 50px;
+
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+
 	/*display: inline-block;*/
 
 }
