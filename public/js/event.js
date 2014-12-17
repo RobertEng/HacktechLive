@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+	/* For temp website to gather emails. Going straight to live anyway. lulz. */
 	$("#updateForm").submit(function(e) {
 		e.preventDefault(); // Stop form submission and subsequent refresh
 

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Register for Hacktech</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Hacktech 2015 Feb. 27 - Mar. 1">
+    <meta name="keywords" content="hacktech, caltech, hackathon">
+
+    <%- include partials/headerFiles.ejs %>
+    <link rel='stylesheet' href='/css/register.css' />
+
+
+  </head>
+  <body>
+    <div id="registerContainer">
+      <form>
+        <h6>First Name:</h6>
+        <input type="text" id="registerText" class="form-control" placeholder="Ruby">
+        
+        <h6>Last Name:</h6>
+        <input type="text" id="registerText" class="form-control" placeholder="Rayles">
+
+        <h6>Email:</h6>
+        <input type="text" id="registerText" class="form-control" placeholder="swagoverflow@caltech.edu"> <!-- yeah don't try the email, it doesn't exist. -->
+        
+        <h6>Age:</h6>
+        <input type="text" id="registerText" class="form-control" placeholder="swagoverflow@caltech.edu">
+
+        <h6>Grade:</h6>
+        <select>
+          <option disabled selected></option>
+          <option value="hs">High School</option>      
+          <option value="ug">Undergraduate</option>
+          <option value="gr">Graduate</option>
+          <option value="other">Other</option>
+        </select>
+        Dafuddyduddy does other go to?
+        
+
+
+        <h6>School/University:</h6>
+        <input type="text" id="registerText" class="form-control" placeholder="Caltech">
+
+        <h6>Taking the Bus?</h6>
+        <input type="radio" name="busRide" value="yes">Yep!
+        <input type="radio" name="busRide" value="no">Nah
+
+        <h6>Which Bus?</h6>
+        <select>
+          <option disabled selected></option>
+          <option value="ucb">UC Berkeley</option>      
+          <option value="tech">Caltech</option>
+          <option value="ucdav">UC Davis</option>
+          <option value="harv">Harvey Mudd</option>
+          <option value="uci">UC Irvine</option>
+          <option value="ucla">UCLA</option>
+          <option value="ucsd">UC San Diego</option>
+          <option value="stan">Stanford</option>
+          <option value="usc">USC</option>
+
+        </select>
+
+
+        <input class="btn" type="submit" value="Register">
+      </form>
+
+
+
+    </div>
+
+    <%- include partials/footerFiles.ejs %>    
+  </body>
+</html>

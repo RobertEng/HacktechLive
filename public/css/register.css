@@ -1,0 +1,39 @@
+body {
+	background-color: orange;
+}
+
+#registerContainer {
+	max-width: 400px;
+	margin: 40px auto;
+
+	color: black;
+	font-size: 20px;
+	
+
+}
+
+
+#registerText, select {
+	display: inline-block;
+	/*width: 400px;*/
+	width: 100%;
+	height: auto;
+	margin: auto;
+
+	font-size: 20px;
+	
+	border-color: #ff9422;
+	border-width: 2px;
+	background-color: rgba(255, 255, 255, 0.75);
+	-webkit-transition: background-color 0.2s;
+  	transition: background-color 0.2s;
+}
+
+#registerText:hover, #registerText:focus, select:hover, select:focus {
+	background-color: white;
+	border-color: #FFA647;
+}
+
+h6 {
+	font-size: 20px;
+}
