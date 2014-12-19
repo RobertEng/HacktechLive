@@ -12,41 +12,49 @@
 
   </head>
   <body>
-    <div id="registerContainer">
+    <div id="formContainer">
       <form>
-        <h6>First Name:</h6>
-        <input type="text" id="registerText" class="form-control" placeholder="Ruby">
+        <h6>First Name:*</h6>
+        <input type="text" name="firstname" class="form-control registerText required" placeholder="Ruby">
         
-        <h6>Last Name:</h6>
-        <input type="text" id="registerText" class="form-control" placeholder="Rayles">
+        <h6>Last Name:*</h6>
+        <input type="text" name="lastname" class="form-control registerText required" placeholder="Rayles">
 
-        <h6>Email:</h6>
-        <input type="text" id="registerText" class="form-control" placeholder="swagoverflow@caltech.edu"> <!-- yeah don't try the email, it doesn't exist. -->
+        <h6>Email:*</h6>
+        <input type="text" name="email" class="form-control registerText required" placeholder="swagoverflow@caltech.edu"> <!-- yeah don't even try the email, it doesn't exist. -->
         
-        <h6>Age:</h6>
-        <input type="text" id="registerText" class="form-control" placeholder="swagoverflow@caltech.edu">
+        <h6>Age:*</h6>
+        <input type="text" name="age" class="form-control registerText required">
 
-        <h6>Grade:</h6>
-        <select>
+        <div class='inline-input'>
+        <h6>Grade:*</h6>
+        <select name="grade">
           <option disabled selected></option>
           <option value="hs">High School</option>      
           <option value="ug">Undergraduate</option>
           <option value="gr">Graduate</option>
           <option value="other">Other</option>
         </select>
-        Dafuddyduddy does other go to?
-        
+        </div><!--
+
+        --><div class="inline-input">
+        <h6 id="formHeadGrade" style="visibility: hidden;">Other:</h6>
+        <input type="text" name="gradeother" id="formTextGrade" class="form-control registerText" placeholder="Employed, Sponsor, etc" style="visibility: hidden;">
+        </div>
 
 
-        <h6>School/University:</h6>
-        <input type="text" id="registerText" class="form-control" placeholder="Caltech">
+        <h6>School/University:*</h6>
+        <input type="text" name="school" class="form-control registerText required" placeholder="Caltech">
 
-        <h6>Taking the Bus?</h6>
-        <input type="radio" name="busRide" value="yes">Yep!
-        <input type="radio" name="busRide" value="no">Nah
+        <div class="inline-input">
+        <h6>Taking the Bus?*</h6>
+        <input type="radio" name="busRide" value="yes"> Yep!
+        <input type="radio" name="busRide" value="no"> Nah
+        </div><!-- 
 
-        <h6>Which Bus?</h6>
-        <select>
+        --><div class="inline-input">
+        <h6 id="formHeadBus" style="visibility: hidden;">Which Bus?</h6>
+        <select name="busorigin" id="formSelectBus" style="visibility: hidden;">
           <option disabled selected></option>
           <option value="ucb">UC Berkeley</option>      
           <option value="tech">Caltech</option>
@@ -57,17 +65,29 @@
           <option value="ucsd">UC San Diego</option>
           <option value="stan">Stanford</option>
           <option value="usc">USC</option>
-
         </select>
+        </div>
+
+        <h6>Link to Your Website:</h6>
+        <input type="text" name="personalweb" class="form-control registerText">
+
+        <h6>LinkedIn Profile:</h6>
+        <input type="text" name="linkedinweb" class="form-control registerText">
+
+        <h6>Resume:</h6>
+        <input type="text" class="form-control registerText">
 
 
-        <input class="btn" type="submit" value="Register">
+        <input id="formSubmit" class="btn btn-tech" type="submit" value="Register">
       </form>
 
 
 
     </div>
 
-    <%- include partials/footerFiles.ejs %>    
+    <%- include partials/footerFiles.ejs %>
+
+    <script src="/js/form.js"></script>
+
   </body>
 </html>

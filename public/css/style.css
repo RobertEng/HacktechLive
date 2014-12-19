@@ -45,14 +45,15 @@ h3 {
 }
 
 .btn-tech {
-	background-color: #ff9422;
+	background-color: #F5841F;
 	color: white;
-	-webkit-transition: color 0.2s;
-  	transition: color 0.2s;
+	-webkit-transition: color 0.2s, border-color 0.2s;
+  	transition: color 0.2s, border-color 0.2s;
 }
 
 .btn-tech:hover, .btn-tech:focus {
 	color: #d35400; /* Pumpkin! */
+	border-color: #d35400;
 }
 
 .slide-title {
