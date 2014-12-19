@@ -13,6 +13,8 @@ router.get('/', function(req, res) {
 router.post('/update', function(req, res) {
 	console.log("In update");
 
+	var pass = true;
+
 	var firstname = req.body.firstname;
 	var lastname = req.body.lastname;
 	var email = req.body.email;
@@ -25,19 +27,49 @@ router.post('/update', function(req, res) {
 	var personalweb = req.body.personalweb;
 	var linkedinweb = req.body.linkedinweb;
 
+	// Check everything exists
+	if(!firstname || !lastname || !email || !age || !grade || !school || !busride) {
+		pass = false;
+	}
+
+	console.log(pass);
+
+
 	// Get rid of gradeother and busorigin if grade and busride aren't other
+	if(grade == "other") {
+		if(!gradeother) {
+			pass = false;
+		}
+	} else { // grade != other
+		gradeother = "";
+	}
 
+	console.log(pass);
 	
-	// Check if email is undefined
 
-	// console.log("YOU ENTERED THIS WEIRD EMAIL " + email);
+	if(busride == "yes") {
+		if(!busorigin) {
+			console.log("IM not supposed to be here");
+			pass = false;
+		}
+	} else { // busride != no
+		busorigin = "";
+	}
+	
+	console.log(pass);
 
+
+	// Check the email
 	// // regex from http://stackoverflow.com/questions/46155/validate-email-address-in-javascript
 	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 	
-	
-	if(email != undefined && re.test(email)) {
+	if(email != undefined && !re.test(email)) {
+		pass = false;
+	}
 
+	console.log(pass);
+
+	if(pass) {
 		var connection = mysql.createConnection({
 		  host     : process.env.RDS_HOSTNAME,
 		  user     : process.env.RDS_USERNAME,
@@ -56,11 +88,6 @@ router.post('/update', function(req, res) {
 			}
 			// console.log('connected as id ' + connection.threadId);
 		});
-
-		// Old one for posterity. No sql injection protection
-		// var queryString = "INSERT INTO email_table (email_update, email_time) VALUES (";
-		// queryString += "'" + email + "', ";
-		// queryString += "'" + (new Date()).toUTCString() + "');";
 		
 		// This one protects against injections, I do hope.
 		var queryString = "INSERT INTO info_table (time, first_name, last_name, email, age, grade, grade_other, school, bus_ride, bus_origin, personal_web, linkedin_web) VALUES (?,?,?,?,?,?,?,?,?,?,?,?);";
@@ -72,8 +99,8 @@ router.post('/update', function(req, res) {
 				success = false;
 			}
 		});
-		
-		
+
+
 		connection.end(function(err) {
 			if(err) {
 				console.log(err);
@@ -89,11 +116,8 @@ router.post('/update', function(req, res) {
 				}
 			}
 		});
-	} else { // Email did not pass validation
-		res.end("email");		
-
-		// return back popup YOU DUN MESSED UP
-
+	} else { // did not pass validation
+		res.end("userborked");		
 
 	}
  	
