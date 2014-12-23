@@ -176,8 +176,8 @@ h3 {
 #whatContent {
 	max-width: 700px;
 	text-align: center;
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-top: 50px;
+	padding-bottom: 60px;
 	
 }
 
@@ -195,7 +195,7 @@ h3 {
 }
 
 #placeContainer {
-	padding-top: 60px;
+	padding-top: 80px;
 	padding-bottom: 60px;
 	padding-left: 0px;
 	padding-right: 0px;
@@ -212,6 +212,10 @@ h3 {
 
 }
 
+.place-stat img {
+	height: 200px;
+}
+
 
 /***************** FAQ SLIDE THINGS *******************/
 #faqSlide {
@@ -219,14 +223,22 @@ h3 {
 }
 
 #faqContainer {
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-top: 60px;
+	padding-bottom: 70px;
 }
 
 .faqModule {
 	padding: 10px;
 
 	/*margin: 20px;*/
+}
+
+.faqModule a {
+	color: #F5841F;
+}
+
+.faqModule a:hover {
+	color: #d35400; /* Pumpkin! */
 }
 
 .faqQuest {
@@ -251,8 +263,8 @@ h3 {
 }
 
 #logisticContainer {
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-top: 60px;
+	padding-bottom: 80px;
 
 	text-align: center;
 }
@@ -306,8 +318,8 @@ h3 {
 }
 
 #famousContainer {
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-top: 60px;
+	padding-bottom: 60px;
 
 	text-align: center;
 
@@ -398,38 +410,38 @@ h5 { /* For descriptions */
 }
 
 #famousSpiegel {
-	background-image: url(/img/famous_spiegel.jpg);
+	background-image: url(/img/famous_spiegel_smaller.jpg);
 	background-position: 50%;
 }
 
 #famousSnapchat {
-	background-image: url(/img/famous_snapchat.jpg);
-	background-position: 50%;
+	background-image: url(/img/famous_snapchat_smaller.jpg);
+	/*background-position: 50%;*/
 }
 
 
 #famousGlover {
-	background-image: url(/img/famous_glover.jpg);	
+	background-image: url(/img/famous_glover_smaller.jpg);	
 }
 
 #famousCamp {
 	background-image: url(/img/famous_camp.jpg);
-	background-position: 50%;
+	/*background-position: 50%;*/
 }
 
 #famousOhanian {
-	background-image: url(/img/famous_ohanian.jpg);
+	background-image: url(/img/famous_ohanian_smaller.jpg);
 
 }
 
 #famousReddit {
-	background-image: url(/img/famous_reddit.png);
-	background-position: 50%;
+	background-image: url(/img/famous_reddit_smaller.jpg);
+	/*background-position: 50%;*/
 }
 
 #famousDupri {
-	background-image: url(/img/famous_dupri.jpg);
-	background-position: right;
+	background-image: url(/img/famous_dupri_smaller.jpg);
+	/*background-position: right;*/
 }
 
 #famousSosodef {
@@ -438,23 +450,23 @@ h5 { /* For descriptions */
 }
 
 #famousRad {
-	background-image: url(/img/famous_rad.jpg);
-	background-position: 70%;	
+	background-image: url(/img/famous_rad_smaller.jpg);
+	/*background-position: 70%;	*/
 }
 
 #famousTinder {
-	background-image: url(/img/famous_tinder.jpeg);
-	background-position: 50%;
+	background-image: url(/img/famous_tinder_smaller.jpg);
+	/*background-position: 50%;*/
 }
 
 #famousHeyward {
-	background-image: url(/img/famous_heyward.jpg);
-	background-position: right;
+	background-image: url(/img/famous_heyward_smaller.jpg);
+	/*background-position: right;*/
 }
 
 #famousWhisper {
-	background-image: url(/img/famous_whisper.png);
-	background-position: 50%;
+	background-image: url(/img/famous_whisper.jpg);
+	/*background-position: 50%;*/
 }
 
 
@@ -712,8 +724,8 @@ h5 { /* For descriptions */
 }
 
 #sponsorContainer {
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-top: 60px;
+	padding-bottom: 60px;
 }
 
 #sponsorHeader {
@@ -764,4 +776,17 @@ h5 { /* For descriptions */
 	filter: grayscale(0);
 	opacity: 1;
 
+}
+
+/***************** FOOTER SLIDE THINGS *******************/
+
+#footerSlide {
+	background-color: #F5841F;
+
+	border-top: 4px solid #585858 ;
+}
+
+#footerContainer {
+	padding-top: 40px;
+	padding-bottom: 40px;
 }
