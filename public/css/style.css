@@ -213,7 +213,7 @@ h3 {
 }
 
 .place-stat img {
-	height: 200px;
+	height: 250px;
 }
 
 
@@ -224,7 +224,11 @@ h3 {
 
 #faqContainer {
 	padding-top: 60px;
-	padding-bottom: 70px;
+	padding-bottom: 60px;
+}
+
+#faqTitle {
+	margin-bottom: 20px;
 }
 
 .faqModule {
@@ -319,7 +323,7 @@ h3 {
 
 #famousContainer {
 	padding-top: 60px;
-	padding-bottom: 60px;
+	padding-bottom: 40px; /* Don't forget famous words adds some pixels to bottom */
 
 	text-align: center;
 
@@ -728,9 +732,15 @@ h5 { /* For descriptions */
 	padding-bottom: 60px;
 }
 
+#sponsorTitle {
+	margin-bottom: 15px;
+}
+
 #sponsorHeader {
 	font-size: 20px;
 	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 40px;
 }	
 
 #sponsorMail {

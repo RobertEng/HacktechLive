@@ -78,7 +78,7 @@
 
     <div id="faqSlide" class="slide">
       <div class="container" id="faqContainer">
-        <h1 class="slide-title">FAQ</h1>
+        <h1 id="faqTitle" class="slide-title">FAQ</h1>
         
         <div class="row">
           <div class="faqModule col-md-4">
@@ -251,7 +251,7 @@
         
         <a href="/docs/OLD_judge.pdf" target="_blank">
           <div class="at-element at-element-color">
-            <img class="svg at-icon" src="/img/at_icon_judge.svg">
+            <img class="svg at-icon" src="/img/at_icon_judge2.svg">
             <p><b>JUDGES</b></p>
         </div>
         </a>
@@ -347,7 +347,7 @@
     </div>
 
 
-    <div id="showSlide" class="slide">
+    <!-- <div id="showSlide" class="slide"> -->
 <!-- 
       <ul class="slideshow">
         <li><span>Moo</span></li>
@@ -366,7 +366,11 @@
       </div>
  -->
       <!-- geez two slide classes? That bothers me -->
-      <div id="carouselTech" class="carousel fade" data-ride="carousel">
+
+
+      <!-- <div id="carouselTech" class="carousel fade" data-ride="carousel"> -->
+      
+
         <!-- Indicators -->
 <!--         <ol class="carousel-indicators">
           <li data-target="#carouselTech" data-slide-to="0" class="active"></li>
@@ -467,17 +471,17 @@
           <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
- -->
+ --><!-- 
        </div>
 
-    </div>
+    </div> -->
 
 
 
 
     <div id="sponsorSlide" class="slide">
       <div class="container" id="sponsorContainer">
-        <h1 class="slide-title">PAST SPONSORS</h1>
+        <h1 id="sponsorTitle" class="slide-title">PAST SPONSORS</h1>
         <h2 id="sponsorHeader">Want to sponsor us? Send us an <a id="sponsorMail" href="mailto:contact@hacktech.io" target="_top"><b>Email!</b></a></h2>
 
         <div class="row sponsor-row sponsor-4">
@@ -568,6 +572,9 @@
 
     <div id="footerSlide" class="slide">
       <div class="container" id="footerContainer">
+        <form  id="registerForm" action="/register">
+          <button id="registerButton" class="btn btn-reg">REGISTER</button>
+        </form>
         <p>Made with <3 by Robert Eng, Ellen Chuan, and the Hacktech Team</p>
       </div>
     </div>
