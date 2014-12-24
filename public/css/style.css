@@ -7,6 +7,7 @@ body {
 	font-size: 40px;
 	color: white;
 
+
 	height: 100%;
 }
 
@@ -49,6 +50,18 @@ h3 {
 .btn-tech:hover, .btn-tech:focus {
 	color: #d35400; /* Pumpkin! */
 	border-color: #d35400;
+}
+
+.btn-invert {
+	background-color: white;
+	color: #F5841F;
+	-webkit-transition: color 0.2s, border-color 0.2s;
+  	transition: color 0.2s, border-color 0.2s;
+}
+
+.btn-invert:hover, .btn-invert:focus {
+	color: #d35400; /* Pumpkin! */
+	border-color: #F5841F;
 }
 
 .slide-title {
@@ -122,7 +135,7 @@ h3 {
 	background-position: center bottom;
 	
 	min-height: 100%;
-	padding-top: 50px;
+	padding-top: 70px; /* Little extra for navbar */
 	
 	position: relative; 	/* For banner */
 	padding-bottom: 200px; 	/* For banner */
@@ -170,7 +183,7 @@ h3 {
 
 /***************** WHAT SLIDE THINGS *******************/
 #whatSlide {
-	color: black;
+	color:  white;
 	background-color: #F5841F;
 }
 
@@ -225,8 +238,9 @@ h3 {
 }
 
 #faqContainer {
-	padding-top: 60px;
-	padding-bottom: 60px;
+	/*padding-top: 60px;*/
+	/*padding-bottom: 60px;*/
+	padding: 60px 100px;
 }
 
 #faqTitle {
@@ -234,7 +248,7 @@ h3 {
 }
 
 .faqModule {
-	padding: 10px;
+	padding: 20px;
 
 	/*margin: 20px;*/
 }
@@ -255,6 +269,30 @@ h3 {
 .faqAnswer {
 	font-size: 14px;
 }
+
+#faq-space {
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+.faq-btn {
+	width: 100px;
+}
+
+.faq-more {
+	display: none;
+	/*height: 0px;*/
+	/*-webkit-transition: 2s;*/
+	/*transition: 2s;*/
+
+}
+/*
+.faq-more.faq-move {
+	height: 200% !important;	
+}
+*/
+
 
 /***************** LOGISTIC SLIDE THINGS *******************/
 #logisticSlide {

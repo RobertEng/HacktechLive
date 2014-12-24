@@ -33,4 +33,17 @@ $(document).ready(function(){
 	    }, 'xml');
 	});
 
+	$(".faq-btn").click(function() {
+		if(this.id == "faqMoreBtn") {
+			$("#faqMoreBtn").css("display", "none");
+			$("#faqLessBtn").css("display", "initial");
+			$(".faq-more").css("display", "block");
+			$(".faq-more").addClass("faq-move");
+		} else {
+			$("#faqMoreBtn").css("display", "initial");
+			$("#faqLessBtn").css("display", "none");
+			$(".faq-more").css("display", "none");
+		}
+		console.log("Hey");
+	});
 });
