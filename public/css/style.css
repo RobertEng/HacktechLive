@@ -3,8 +3,6 @@ html {
 }
 
 body {
-	/*margin: 0;*/
-	/*font-family: "Lato", sans-serif;*/
 	font-family: 'Exo 2', sans-serif;
 	font-size: 40px;
 	color: white;
@@ -32,7 +30,6 @@ a:hover, a:focus {
 
 h1 {
 	margin-bottom: 5px;
-	/*text-shadow: 2px 2px black;*/ /* Kinda cool. Maybe not the design I'm going for tho */
 
 }
 
@@ -40,8 +37,6 @@ h3 {
 	margin-top: 5px;
 	margin-bottom: 5px;
 	font-size: 20px;
-
-	/*text-shadow: 2px 2px black;*/
 }
 
 .btn-tech {
@@ -68,6 +63,57 @@ h3 {
 }
 
 
+/***************** NAVBAR THINGS *******************/
+
+#thang {
+	position: fixed;
+	top: 0;
+	height: 80px;
+	width: 100%;
+	z-index: 5;
+	border-top: solid 10px #222;
+}
+
+#thang nav {
+	top: -50px;
+	-webkit-transition: top 0.4s;
+	transition: top 0.4s;
+}
+
+#thang:hover nav {
+	top: 0;
+}
+
+#navContainer {
+	/*vertical-align: center;*/
+}
+
+.nav-icon {
+	height: 30px;
+	/*fill: #880000;*/
+
+
+}
+
+.nav-element {
+	display: inline-block;
+}
+
+.nav-element, .nav-element * {
+	fill: white;
+	opacity: 0.95;
+
+	-webkit-transition: opacity 0.2s;
+  	transition: opacity 0.2s;
+}
+
+.nav-element:hover, .nav-element:hover * {
+	/*fill: #F5841F;*/
+	opacity: 1;
+}
+
+
+
 /***************** HOME SLIDE THINGS *******************/
 #homeSlide {
 	background-image: url('/img/mainstreet_blur_dark.jpg');
@@ -80,27 +126,15 @@ h3 {
 	
 	position: relative; 	/* For banner */
 	padding-bottom: 200px; 	/* For banner */
-	/*padding-bottom: 100px;*/ /*For big website */
-	/*padding-bottom: 50px;*/ /* temp padding */
-
-
-
 }
 
 #homeContent {
 	text-align: center;
 	display: block;
-	/*margin: auto;*/
 }
 
 #homeLogo {
-	/* For the old logo */
-	height: 300px;
-
-	/* Stuff for new logo */
-	/*height: 200px;
-	position: relative;
-	left: -50px;*/
+	height: 250px;
 }
 
 #homeWords {
@@ -125,40 +159,6 @@ h3 {
 }
 
 
-/*#updateButton {
-	font-size: 20px;
-	width: 400px;
-	-webkit-transition: border-color 0.2s;
-  	transition: border-color 0.2s;
-	-webkit-transition: color 0.2s;
-  	transition: color 0.2s;
-
-}
-*/
-#updateButton:hover {
-	border-color: #d35400; /* Pumpkin! */
-}
-
-/* Delete this later. I'm moving this over to register.css. */
-/*#registerText {
-	width: 400px;
-	height: auto;
-	margin: auto;
-
-	font-size: 20px;
-	
-	border-color: #ff9422;
-	border-width: 2px;
-	background-color: rgba(255, 255, 255, 0.85);
-	-webkit-transition: background-color 0.2s;
-  	transition: background-color 0.2s;
-}
-
-#registerText:hover, #registerText:focus {
-	background-color: white;
-	border-color: #FFA647;
-}
-*/
 #homeBanner {
 	width: 100%;
 
@@ -171,6 +171,7 @@ h3 {
 /***************** WHAT SLIDE THINGS *******************/
 #whatSlide {
 	color: black;
+	background-color: #F5841F;
 }
 
 #whatContent {
@@ -200,7 +201,7 @@ h3 {
 	padding-left: 0px;
 	padding-right: 0px;
 
-	text-shadow: 2px 2px black;
+	/*text-shadow: 2px 2px black;*/
 
 }
 
@@ -219,7 +220,8 @@ h3 {
 
 /***************** FAQ SLIDE THINGS *******************/
 #faqSlide {
-	color: black;
+	color: white;
+	background-color: #F5841F;
 }
 
 #faqContainer {
@@ -262,8 +264,6 @@ h3 {
 	background-attachment: fixed;
 	background-position: center bottom;
 
-	/*height: 400px;*/
-
 }
 
 #logisticContainer {
@@ -283,10 +283,7 @@ h3 {
 	border: 7px solid;
 	border-radius: 10px;
 
-	/*-webkit-filter: blur(3px);*/
-	/*background-color: rgba(255, 255, 255, 0.4);*/
 	background-color: rgba(0, 0, 0, 0.2);
-
 }
 
 .at-icon {
@@ -336,7 +333,6 @@ h3 {
 	margin: 20px 0px;
 
 	min-width: 250px;
-
 
 	-webkit-perspective: 1000;
 	perspective: 1000;
@@ -415,12 +411,10 @@ h5 { /* For descriptions */
 
 #famousSpiegel {
 	background-image: url(/img/famous_spiegel_smaller.jpg);
-	background-position: 50%;
 }
 
 #famousSnapchat {
 	background-image: url(/img/famous_snapchat_smaller.jpg);
-	/*background-position: 50%;*/
 }
 
 
@@ -430,7 +424,6 @@ h5 { /* For descriptions */
 
 #famousCamp {
 	background-image: url(/img/famous_camp.jpg);
-	/*background-position: 50%;*/
 }
 
 #famousOhanian {
@@ -440,12 +433,10 @@ h5 { /* For descriptions */
 
 #famousReddit {
 	background-image: url(/img/famous_reddit_smaller.jpg);
-	/*background-position: 50%;*/
 }
 
 #famousDupri {
 	background-image: url(/img/famous_dupri_smaller.jpg);
-	/*background-position: right;*/
 }
 
 #famousSosodef {
@@ -455,271 +446,19 @@ h5 { /* For descriptions */
 
 #famousRad {
 	background-image: url(/img/famous_rad_smaller.jpg);
-	/*background-position: 70%;	*/
 }
 
 #famousTinder {
 	background-image: url(/img/famous_tinder_smaller.jpg);
-	/*background-position: 50%;*/
 }
 
 #famousHeyward {
 	background-image: url(/img/famous_heyward_smaller.jpg);
-	/*background-position: right;*/
 }
 
 #famousWhisper {
 	background-image: url(/img/famous_whisper.jpg);
-	/*background-position: 50%;*/
 }
-
-
-
-/***************** REGISTER SLIDE THINGS *******************/
-/* This slide is not needed anymore. Replaced by slideshow */
-
-#registerSlide {
-	/*height: 500px;*/
-
-	color: black;
-	background-color: black;
-}
-
-#registerContainer {
-	height: 100%;
-	padding-top: 40px;
-	padding-bottom: 40px;
-
-	text-align: center;
-}
-
-#registerForm {
-	position: relative;
-	/* put at top of slideshow */
-	/*top: 100%;*/
-	/* Or thd middle */
-	top: -80%;
-	/* Or the bottom */
-	/*top: -50%;*/
-
-	z-index: 1;
-}
-
-.btn-reg {
-	color: #F5841F;
-	border-color: #F5841F;
-	/* Which one looks better? */
-	/*background-color: rgba(0, 0, 0, 0.2);*/
-	background-color: rgba(255, 255, 255, 0.4);
-
-}
-
-.btn-reg:hover, .btn-reg:focus {
-	color: #d35400; /* Pumpkin! */
-
-}
-
-/*.slideshow {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	top: 0px;
-	left: 0px;
-	z-index: 0;
-}
-
-.slideshow li span {
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	color: transparent;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: none;
-    opacity: 0;
-    z-index: 0;
-    -webkit-animation: imageAnimation 36s linear infinite 0s; 
-    animation: imageAnimation 36s linear infinite 0s; 
-
-}
-
-
-
-.slideshow li:nth-child(1) span { 
-    background-image: url(/img/slideshow/1.jpg) 
-}
-.slideshow li:nth-child(2) span { 
-    background-image: url(/img/slideshow/2.jpg);
-    -webkit-animation-delay: 6s; 
-    animation-delay: 6s; 
-}
-.slideshow li:nth-child(3) span { 
-    background-image: url(/img/slideshow/3.jpg);
-    -webkit-animation-delay: 12s; 
-    animation-delay: 12s; 
-}
-.slideshow li:nth-child(4) span { 
-    background-image: url(/img/slideshow/4.jpg);
-    -webkit-animation-delay: 18s; 
-    animation-delay: 18s; 
-}
-.slideshow li:nth-child(5) span { 
-    background-image: url(/img/slideshow/5.jpg);
-    -webkit-animation-delay: 24s; 
-    animation-delay: 24s; 
-}
-.slideshow li:nth-child(6) span { 
-    background-image: url(/img/slideshow/6.jpg);
-    -webkit-animation-delay: 30s; 
-    animation-delay: 30s;
-}
-
-@-webkit-keyframes imageAnimation { 
-    0% { opacity: 0; animation-timing-function: ease-in; }
-    8% { opacity: 1; animation-timing-function: ease-out; }
-    17% { opacity: 1 }
-    25% { opacity: 0 }
-    100% { opacity: 0 }
-}
-
-@keyframes imageAnimation { 
-    0% { opacity: 0; animation-timing-function: ease-in; }
-    8% { opacity: 1; animation-timing-function: ease-out; }
-    17% { opacity: 1 }
-    25% { opacity: 0 }
-    100% { opacity: 0 }
-}
-*/
-
-
-/***************** SHOW SLIDE THINGS *******************/
-#showSlide {
-	background-color: black;
-}
-
-.carousel {
-	/*overflow: hidden;*/
-	height: 500px;
-}
-
-
-.carousel .item {
-	/*-webkit-transform: none;*/
-	/*transform: none;*/
-	/*-webkit-transition: opacity 1s;*/
-	/*transition: opacity 1s;*/
-	/*opacity: 0;*/
-	/*display: block;*/
-	/*position: absolute;*/
-	/*top: 0px;*/
-}
-
-.carousel .item.active {
-	/*-webkit-transition: opacity 10s;*/
-	/*transition: opacity 10s;*/
-	/*opacity: 1;*/
-}
-
-.carousel .item.active.left, .carousel .item.active.right {
-	/*display: block;*/
-}
-
-
-.carousel .active.left, .carousel .active.right {
-    /*left:0;*/
-    /*opacity: 0;*/
-    /*z-index:2;*/
-}
-
-.carousel .next, .carousel .prev {
-    /*left:0;*/
-	/*-webkit-transition: opacity 1s;*/
-	/*transition: opacity 1s;*/
-    /*opacity:1;*/
-    /*z-index:1;*/
-    /*display: absolute;*/
-    /*display: block;*/
-
-}
-
-
-/* Change the height of pics in slideshow */
-.carousel-inner>.item>img {
-	/*height: 600px;*/
-	/*vertical-align: middle;*/
-	/*margin: -100px auto;*/
-	margin: auto;
-	height: 500px;
-
-
-}
-
-
-/*.carousel-fade {
-  .carousel-inner {
-    .item {
-      opacity: 0;
-      transition-property: opacity;
-    }
-
-    .active {
-      opacity: 1;
-    }
-
-    .active.left, .active.right {
-      left: 0;
-      opacity: 0;
-      z-index: 1;
-    }
-
-    .next.left, .prev.right {
-      opacity: 1;
-    }
-  }
-
-  .carousel-control {
-    z-index: 2;
-  }
-}
-*/
-
-/*.carousel .item {-webkit-transition: opacity 3s; -moz-transition: opacity 3s; -ms-transition: opacity 3s; -o-transition: opacity 3s; transition: opacity 3s;}
-.carousel .active.left, .carousel .active.right {left:0;opacity:0;z-index:2;}
-.carousel .next, .carousel .prev {left:0;opacity:1;z-index:1;}*/
-
-
-.carousel.fade {
-  opacity: 1;
-}
-.carousel.fade .item {
-  -moz-transition: opacity ease-in-out .7s;
-  -o-transition: opacity ease-in-out .7s;
-  -webkit-transition: opacity ease-in-out .7s;
-  transition: opacity ease-in-out .7s;
-  left: 0 !important;
-  opacity: 0;
-  top:0;
-  position:absolute;
-  width: 100%;
-  display:block !important;
-  z-index:1;
-}
-.carousel.fade .item:first-child {
-  top:auto;
-  position:relative;
-}
-.carousel.fade .item.active {
-  opacity: 1;
-  -moz-transition: opacity ease-in-out .7s;
-  -o-transition: opacity ease-in-out .7s;
-  -webkit-transition: opacity ease-in-out .7s;
-  transition: opacity ease-in-out .7s;
-  z-index:2;
-}
-
-
 
 
 /***************** SPONSOR SLIDE THINGS *******************/
@@ -799,4 +538,25 @@ h5 { /* For descriptions */
 #footerContainer {
 	padding-top: 40px;
 	padding-bottom: 40px;
+
+	text-align: center;
 }
+
+#registerForm {
+	padding-bottom: 40px;
+}
+
+.btn-reg {
+	color: #F5841F;
+	border-color: #F5841F;
+	/* Which one looks better? */
+	/*background-color: rgba(0, 0, 0, 0.2);*/
+	background-color: rgba(255, 255, 255, 0.4);
+	/*background-color: white;*/
+}
+
+.btn-reg:hover, .btn-reg:focus {
+	color: #d35400; /* Pumpkin! */
+
+}
+

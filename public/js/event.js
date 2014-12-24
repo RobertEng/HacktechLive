@@ -2,7 +2,6 @@ $(document).ready(function(){
 
 
 	$('.carousel').carousel({interval: 10000, pause: "none"});
-	
 
 
 	// Some nice script to convert all svg classes into the svg code
