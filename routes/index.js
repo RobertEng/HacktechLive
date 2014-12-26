@@ -126,7 +126,17 @@ router.post('/update', function(req, res) {
 
 router.get('/register', function(req, res) {
  	res.render('register');
-
 });
+
+router.get('/team', function(req, res) {
+ 	res.render('team');
+});
+
+router.get('/startup', function(req, res) {
+ 	res.render('startup');
+});
+
+
+
 
 module.exports = router;
