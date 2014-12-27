@@ -98,7 +98,7 @@ h3 {
 }*/
 
 #navContainer a {
-	/*vertical-align: middle;*/
+	vertical-align: middle;
 	margin: auto 5px;
 }
 
@@ -111,6 +111,7 @@ h3 {
 
 .nav-element {
 	display: inline-block;
+	height: 100%;
 }
 
 .nav-element, .nav-element * {
@@ -148,7 +149,7 @@ h3 {
 }
 
 #homeLogo {
-	height: 250px;
+	height: 350px;
 }
 
 #homeWords {
@@ -156,8 +157,10 @@ h3 {
 }
 
 #registerButton {
-	padding: 0px 24px 5px 24px; /* Exo 2 font has floaty space above it. This fixes it. */
-  	font-size: 36px;
+	/*padding: 0px 24px 5px 24px;*/ /* Exo 2 font has floaty space above it. This fixes it. */
+	padding: 5px 24px 5px 24px; /* Exo 2 font has floaty space above it. This fixes it. */
+
+  	font-size: 20px;
 
 	width: 300px;
 
