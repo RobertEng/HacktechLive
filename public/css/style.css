@@ -137,7 +137,7 @@ h3 {
 	background-position: center bottom;
 	
 	min-height: 100%;
-	padding-top: 70px; /* Little extra for navbar */
+	padding-top: 40px; /* Little extra for navbar */
 	
 	position: relative; 	/* For banner */
 	padding-bottom: 200px; 	/* For banner */
